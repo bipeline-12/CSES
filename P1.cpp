@@ -7,32 +7,24 @@ using namespace std;
 int solve(int n)
 {
 	
-	int n;
+	ll n;
 	cin>>n;
-	int m = n;
-	int count=1;
-	int i=0;
-	vector<int> seq;
-	seq.push_back(n);
-	while (m!=1){
+	ll count=1;
+	while (n>1){
 
-		if(m%2 == 0){
-	    m=m/2;
-	    count++;
+		printf("%lld ",n);
+
+		if(n%2 == 0){
+	    	n=n/2;
+	    	count++;
 	    }
 	    else{
-	        m=(3*m+1);
+	        n=(3*n+1);
 	        count++;
 	    }
-	    seq.push_back(m);
-	  }
-
-	  seq.push_back(1);
-
-	  while(i<count){
-	  	cout << seq[i] <<" ";
-	  	i++;
-	  }
+	    
+	}
+	printf("1\n");
 
 }
 
@@ -40,7 +32,6 @@ int solve(int n)
 int main(){
 	ios_base::sync_with_stdio(0);
 	cin.tie(0);
-
 	solve();
 	return 0;
 }
