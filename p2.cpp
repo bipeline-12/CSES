@@ -1,25 +1,17 @@
-//Missing Number
-
-int main(){
+//Missing number
 #include <bits/stdc++.h>
 #define ll long long 
 #define pb push_back
 using namespace std;
 
 int main(){
-	int n;
+	ll n, sum =0;
 	cin >> n;
-	int arr[n];
-	for (int i=0; i<n-1; i++)
+	for (int i=1; i<n; ++i)
 	{
-		cin >> arr[i];
+		int a;
+		cin >> a;
+		sum+=a;
 	}
-  	sort(arr, arr +n);
-  	for (int i=0; i<n; i++)
-  	{
-  		if((i+1)!=arr[i]) 
-  			cout << i+1;  	}
-
-
-  	return 0;
+	cout << n*(n+1)/2-sum;
 }
